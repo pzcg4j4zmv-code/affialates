@@ -1,4 +1,5 @@
 const products = [
+  // --- PRODUITS AMAZON ---
   {
     id: 1,
     title: "Ensemble de Bandes de Résistance Fokky (5 Niveaux)",
@@ -20,7 +21,7 @@ const products = [
     title: "Gourde Air Up Anthracite + Pods",
     category: "amazon",
     price: "34,99 €",
-    image: "./air up.png",
+    image: "./airup.png", // Ajuste selon le nom exact sur GitHub
     link: "https://link.amazon/B0f6tJnn5"
   },
   {
@@ -30,6 +31,16 @@ const products = [
     price: "19,99 €",
     image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=600&auto=format&fit=crop",
     link: "https://link.amazon/B0ikU36B0"
+  },
+
+  // --- BUSINESS & FORMATIONS (STRIPE 7 €) ---
+  {
+    id: 5,
+    title: "Formation : Prise de Muscle Sec & Nutrition",
+    category: "business",
+    price: "7,00 €",
+    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop",
+    link: "https://buy.stripe.com/TON_LIEN_STRIPE_ICI" // Coller ton lien Stripe ici
   }
 ];
 
@@ -37,16 +48,23 @@ function displayProducts(itemsToDisplay) {
   const container = document.getElementById('productGrid');
   if (!container) return;
 
-  container.innerHTML = itemsToDisplay.map(product => `
-    <div class="card">
-      <img src="${product.image}" alt="${product.title}">
-      <div class="card-info">
-        <h3 class="card-title">${product.title}</h3>
-        <p class="card-price">${product.price}</p>
-        <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="buy-btn">Voir sur Amazon</a>
+  container.innerHTML = itemsToDisplay.map(product => {
+    const isBusiness = product.category === 'business';
+    const btnText = isBusiness ? "Accéder à la formation (7€)" : "Voir sur Amazon";
+
+    return `
+      <div class="card">
+        <img src="${product.image}" alt="${product.title}">
+        <div class="card-info">
+          <h3 class="card-title">${product.title}</h3>
+          <p class="card-price">${product.price}</p>
+          <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="buy-btn">
+            ${btnText}
+          </a>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
