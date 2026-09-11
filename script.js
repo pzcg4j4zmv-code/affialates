@@ -36,7 +36,7 @@ const products = [
   // --- BUSINESS & FORMATIONS (STRIPE 7 €) ---
   {
     id: 5,
-    title: "Guide & Tips Business Fitness - Prise de Muscle & Nutrition",
+    title: "Guide & Tips Business",
     category: "business",
     price: "7,00 €",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop",
