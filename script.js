@@ -39,7 +39,7 @@ const products = [
     title: "Guide & Tips Business",
     category: "business",
     price: "7,00 €",
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDS1E4-t2VnDmxtIFRWnbmI8J_Os8jJLUnLTN2LuPNVw&s=10",
     link: "https://buy.stripe.com/8x26ozazn1KTaer73y8og04"
   }
 ];
