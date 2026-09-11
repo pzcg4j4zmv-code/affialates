@@ -21,7 +21,7 @@ const products = [
     title: "Gourde Air Up Anthracite + Pods",
     category: "amazon",
     price: "34,99 €",
-    image: "./airup.png", // Ajuste selon le nom exact sur GitHub
+    image: "./air up.png", // Ajuste selon le nom exact sur GitHub
     link: "https://link.amazon/B0f6tJnn5"
   },
   {
