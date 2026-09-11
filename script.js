@@ -21,7 +21,7 @@ const products = [
     title: "Gourde Air Up Anthracite + Pods",
     category: "amazon",
     price: "34,99 €",
-    image: "./air up.png", // Ajuste selon le nom exact sur GitHub
+    image: "./airup.png",
     link: "https://link.amazon/B0f6tJnn5"
   },
   {
@@ -36,11 +36,11 @@ const products = [
   // --- BUSINESS & FORMATIONS (STRIPE 7 €) ---
   {
     id: 5,
-    title: "Formation : Prise de Muscle Sec & Nutrition",
+    title: "Guide & Tips Business Fitness - Prise de Muscle & Nutrition",
     category: "business",
     price: "7,00 €",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop",
-    link: "https://buy.stripe.com/TON_LIEN_STRIPE_ICI" // Coller ton lien Stripe ici
+    link: "https://buy.stripe.com/8x26ozazn1KTaer73y8og04"
   }
 ];
 
@@ -50,7 +50,7 @@ function displayProducts(itemsToDisplay) {
 
   container.innerHTML = itemsToDisplay.map(product => {
     const isBusiness = product.category === 'business';
-    const btnText = isBusiness ? "Accéder à la formation (7€)" : "Voir sur Amazon";
+    const btnText = isBusiness ? "Obtenir le guide (7€)" : "Voir sur Amazon";
 
     return `
       <div class="card">
